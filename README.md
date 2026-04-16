@@ -28,10 +28,18 @@ awk '/MemTotal/ {print $2 / 4}' /proc/meminfo
 ```
 
 **Screenshot 0:** Output of `free -m` showing your VM's RAM and swap.
+<img width="618" height="129" alt="Screenshot 2026-04-16 at 12 14 27 PM" src="https://github.com/user-attachments/assets/a661138a-fa83-470d-97d7-563724c98bd8" />
+
 
 > **Q0.1:** If your VM has 2048 MB of RAM and the page size is 4096 bytes, how many physical page frames exist? Show your arithmetic.
 
----
+Total RAM = 3901 MB
+Page size = 4096 bytes = 4 KB
+Step-by-step Calculation
+Convert RAM → KB:
+3901 x 1024 = 3,994,624 KB
+Each page = 4 KB 
+3994624 / 4 = 998,656 page frames
 
 ## Section 1 - The Virtual Address Space
 
